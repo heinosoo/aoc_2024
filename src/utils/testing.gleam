@@ -5,7 +5,6 @@ import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
 import tempo/duration
-import tempo/time
 
 pub type TestCase {
   TestCase(input_file: String, expected: Option(String))
@@ -36,9 +35,9 @@ fn check_input(solver: fn(String) -> String, input: TestCase) -> Bool {
   io.println("")
   io.println(string.repeat("-", 20) <> file <> string.repeat("-", 20))
 
-  let t_1 = time.now_local()
+  let t_1 = duration.start_monotonic()
   let solution = solver(file)
-  let time_delta = time.difference(time.now_local(), t_1) |> duration.format
+  let time_delta = duration.stop_monotonic(t_1) |> duration.format
   io.println("Finished: " <> file <> " in " <> time_delta)
   io.println("Solution: " <> solution)
 
