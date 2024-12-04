@@ -2,12 +2,11 @@ import gleam/erlang/process
 import gleam/int
 import gleam/io
 import gleam/list
-import gleam/option.{type Option, None, Some}
 import gleam/string
 import tempo/duration
 
 pub type TestCase {
-  TestCase(input_file: String, expected: Option(String))
+  TestCase(input_file: String, expected: String)
 }
 
 pub fn check_solution(solver: fn(String) -> String, cases: List(TestCase)) {
@@ -41,16 +40,15 @@ fn check_input(solver: fn(String) -> String, input: TestCase) -> Bool {
   io.println("Finished: " <> file <> " in " <> time_delta)
   io.println("Solution: " <> solution)
 
-  case expected {
-    Some(expected) if expected == solution -> {
+  case expected == solution {
+    True -> {
       io.println(green("Correct!"))
       True
     }
-    Some(expected) -> {
+    False -> {
       io.println_error(red("Expected: " <> expected))
       False
     }
-    None -> True
   }
 }
 

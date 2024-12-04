@@ -1,14 +1,13 @@
 import gleam/int
 import gleam/list
-import gleam/option.{Some}
 import gleam/result
 import gleam/string
 import utils/common
 import utils/testing.{TestCase}
 
 const test_cases = [
-  TestCase("inputs/day_01/test.txt", Some("11")),
-  TestCase("inputs/day_01/input.txt", Some("3246517")),
+  TestCase("inputs/day_01/test.txt", "11"),
+  TestCase("inputs/day_01/input.txt", "3246517"),
 ]
 
 pub fn main() {

@@ -7,8 +7,8 @@ import utils/grid
 import utils/testing.{TestCase}
 
 const test_cases = [
-  TestCase("inputs/day_04/test1.txt", Some("9")),
-  TestCase("inputs/day_04/input.txt", Some("1974")),
+  TestCase("inputs/day_04/test1.txt", "9"),
+  TestCase("inputs/day_04/input.txt", "1974"),
 ]
 
 const patterns = [

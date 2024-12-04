@@ -1,6 +1,6 @@
 import gleam/int
 import gleam/list
-import gleam/option.{Some}
+import gleam/option
 import gleam/regexp
 import gleam/result
 import gleam/string
@@ -8,8 +8,8 @@ import utils/common
 import utils/testing.{TestCase}
 
 const test_cases = [
-  TestCase("inputs/day_03/test2.txt", Some("48")),
-  TestCase("inputs/day_03/input.txt", Some("107069718")),
+  TestCase("inputs/day_03/test2.txt", "48"),
+  TestCase("inputs/day_03/input.txt", "107069718"),
 ]
 
 pub fn main() {

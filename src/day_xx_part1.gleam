@@ -1,11 +1,10 @@
-import gleam/option.{None, Some}
 import gleam/string
 import utils/common
 import utils/testing.{TestCase}
 
 const test_cases = [
-  TestCase("inputs/day_xx/test1.txt", Some("1")),
-  TestCase("inputs/day_xx/input.txt", None),
+  TestCase("inputs/day_xx/test1.txt", "1"),
+  TestCase("inputs/day_xx/input.txt", "0"),
 ]
 
 pub fn main() {
