@@ -12,6 +12,8 @@ import day_06_part1
 import day_06_part2
 import day_07_part1
 import day_07_part2
+import day_08_part1
+import day_08_part2
 
 pub fn main() {
   day_01_part1.main()
@@ -28,4 +30,6 @@ pub fn main() {
   day_06_part2.main()
   day_07_part1.main()
   day_07_part2.main()
+  day_08_part1.main()
+  day_08_part2.main()
 }
