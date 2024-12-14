@@ -24,6 +24,7 @@ import day_12_part1
 import day_12_part2
 import day_13_part1
 import day_13_part2
+import day_14_part1
 
 pub fn main() {
   day_01_part1.main()
@@ -52,4 +53,6 @@ pub fn main() {
   day_12_part2.main()
   day_13_part1.main()
   day_13_part2.main()
+  day_14_part1.main()
+  // day_14_part2.main() requires input
 }

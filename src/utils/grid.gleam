@@ -22,6 +22,14 @@ pub fn from_lists(from: List(List(t))) -> Grid(t) {
   |> dict.from_list
 }
 
+pub fn from_value(value: t, size: Point) -> Grid(t) {
+  list.range(0, size.0)
+  |> list.flat_map(fn(x) {
+    list.range(0, size.1) |> list.map(fn(y) { #(#(x, y), value) })
+  })
+  |> dict.from_list
+}
+
 pub fn get(grid: Grid(t), x: Int, y: Int) -> t {
   let assert Ok(value) = dict.get(grid, #(x, y))
   value
